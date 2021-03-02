@@ -8,7 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function getDogs(){
         fetch('http://localhost:3000/dogs')
             .then(res => res.json())
-            .then(dogs => dogs.forEach(dog => renderDog(dog)))
+            // .then(dogs => dogs.forEach(dog => renderDog(dog)))
+            .then(dogs => {
+                let tbody = document.querySelector('#table-body')
+                tbody.innerHTML = ''
+                dogs.forEach(dog => renderDog(dog))
+            })
     }
 
     //! Editing the data 
@@ -23,13 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(newDog)
         })
         .then(res => res.json())
-        .then(dog =>{
-            // console.log(dog)
-            let tr = document.getElementById(dog.id)
-            // console.log(tr)
-            tr.remove()
-            renderDog(dog)
-        })
+        // .then(dog =>{
+        //     // console.log(dog)
+        //     let tr = document.getElementById(dog.id)
+        //     // console.log(tr)
+        //     tr.remove()
+        //     renderDog(dog)
+        
+        // })
+        .then(() => getDogs())
     }
 
     //! Handle the submit button 

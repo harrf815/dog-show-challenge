@@ -8,13 +8,13 @@
     },
     {
       "id": 2,
-      "name": "",
-      "breed": "",
-      "sex": ""
+      "name": "Walter",
+      "breed": "Dingo",
+      "sex": "male"
     },
     {
       "id": 3,
-      "name": "sadfhjkl",
+      "name": "Baby",
       "breed": "Dachshund",
       "sex": "female"
     },
@@ -32,7 +32,7 @@
     },
     {
       "id": 6,
-      "name": "lkjhgf",
+      "name": "sara",
       "breed": "English Springer",
       "sex": "male"
     },
@@ -98,7 +98,7 @@
     },
     {
       "id": 17,
-      "name": "Chance",
+      "name": "CC",
       "breed": "Flatcoated Retriever",
       "sex": "female"
     },
